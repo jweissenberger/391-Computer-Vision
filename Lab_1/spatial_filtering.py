@@ -8,7 +8,7 @@ import cv2
 
 
 if __name__ == '__main__':
-    """
+
     img = cv2.imread('puppy.jpg')
 
     print("Here is the original image")
@@ -28,6 +28,7 @@ if __name__ == '__main__':
             print('1/%d, ' % k, end='')
         print("")
 
+    """
     # 3.2.1
 
     # gaussian filters on puppy noise data
@@ -48,7 +49,7 @@ if __name__ == '__main__':
     cv2.imwrite('median_puppy.JPG', median)
     cv2.imshow("med", median)
     key = cv2.waitKey(0)
-    """
+    
     # 3.2.2
     img = cv2.imread('noise_puppy.jpg')
     edges = cv2.Canny(img,100,200)
@@ -58,3 +59,4 @@ if __name__ == '__main__':
     edges2 = cv2.Canny(img,100,200)
     cv2.imshow("window edges", edges2)
     key = cv2.waitKey(0)
+    """
