@@ -1,0 +1,13 @@
+Jack Weissenberger
+Computer Vision Project 1
+
+3.2.1: Compare and contrast the Gaussian and median filters on the noisy dog photo:
+
+The gaussian filter seems to remove the noise from the photo while at the same time blurring it as well. However, it seems to retain more of the high frequency data than the median filter. In the median filter it seems like the colors in the image have almost spread together. You can see this especially in the top left of the image where the white and red almost melt together. The median filter also has a similar effect to the box filter where lines seem to form in the photo. This can be slightly seen on the dog's head. The larger the kernel the more these effects are seen for both filters. 
+
+
+3.2.2: Apply canny edge detection to photos and discuss its performance. Do you think there are better ways to apply edge detection?:
+
+Canny edge detection works very well when there is little noise in the photo. In the non-blurred and no noise photos, the detector worked very well and was fairly easily able to find the edges in the photos. In the high noise photos, the algorithm, picked up the noise as edges and the resulting image was not useful and you could not really gain any insights into the photo from it. When tweaking the parameters, more information could be gained but it was still difficult. 
+
+I am sure there are better ways to find the edges in photos. I think applying a gaussian filter or using some other technique to remove the noise could help the algorithm. I also think that there could be other convolutions that could be used that might be better at detecting edges than this one. 
