@@ -11,3 +11,17 @@ The gaussian filter seems to remove the noise from the photo while at the same t
 Canny edge detection works very well when there is little noise in the photo. In the non-blurred and no noise photos, the detector worked very well and was fairly easily able to find the edges in the photos. In the high noise photos, the algorithm, picked up the noise as edges and the resulting image was not useful and you could not really gain any insights into the photo from it. When tweaking the parameters, more information could be gained but it was still difficult. 
 
 I am sure there are better ways to find the edges in photos. I think applying a gaussian filter or using some other technique to remove the noise could help the algorithm. I also think that there could be other convolutions that could be used that might be better at detecting edges than this one. 
+
+4.2:
+1. After plotting the Fourier coefficients for multiple photos, I can see that images with more high frequency data, so ones with more specific detail and finer grain differences, have more coefficients further away from the center of these plots. 
+This makes sense because you would need these higher coefficients to represent the more complex data in the image.
+
+2. You are able to see small differences in the Fourier transform for data with more noise in it. The images with more noise have more, higher frequency coefficients than the others because the data is less uniform and needs higher frequencies to encode it. 
+
+3. Some plots show higher values around the axis, away from the center of the image. The reason for this can best be visualized by slide 20 from powerpoint 3, frequency analysis. The graph on the bottom right of the slide shows what the 2d waves are at points along the graph. So with this information we can gather that these bright spots and lines represent kinds of waves that are highly represented in the image and that is why they appear so brightly in the images.
+
+4. When you zero out coefficients, those frequencies are then removed from the image.
+This could be very useful for edge detection because when you zero out the low coefficients around 0, frequencies that closely represent straight lines are zeroed out which removes a lot of the straight lines from the image and allows you to see them better.
+
+
+5.2 The effect of different Butterworth filters: From the images from my script we can see the effect of these filters. The ideal low pass filter acts somewhat similarly to the square filter as it blurs the image and it also makes interference lines develop which are visible at the sides of the image. As the coefficients get larger in the filter the image gets more blurred because the higher coefficients correspond to the more detailed high frequency parts of the image. 
